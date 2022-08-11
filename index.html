@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Etch a Sketch</title>
+  </head>
+  <body>
+    <header>Etch a Sketch</header>
+    <main class="container">
+      <div class="controls">
+        <input type="color" name="color" id="color" />
+        <button class="btn active">Color Mode</button>
+        <button class="btn">Rainbow Mode</button>
+        <button class="btn">Clear</button>
+        <button class="btn">Erase</button>
+        <div class="slider-size">16 x 16</div>
+        <input
+          type="range"
+          name="slider"
+          id="slider"
+          class="slider"
+          min="1"
+          max="16"
+        />
+      </div>
+      <div class="grids" id="grids"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+/* general styling */
+
+body {
+  background: linear-gradient(
+    170deg,
+    hsla(199, 5%, 45%, 1),
+    hsla(199, 5%, 75%, 1),
+    hsla(200, 45%, 55%, 1)
+  );
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  width: 10rem;
+  padding: 0.45rem;
+  outline: none;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #000;
+}
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #fff;
+  color: #000;
+}
+
+.active:hover {
+  transform: scale(1.03);
+  background-color: hsla(200, 45%, 55%, 0.4);
+  color: #fff;
+}
+
+header {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 3rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.active {
+  background-color: hsla(200, 45%, 55%, 0.4);
+  color: #fff;
+}
+.grids {
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 60em) {
+  .grids {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+
+    /* background-color: black; */
+  }
+}
