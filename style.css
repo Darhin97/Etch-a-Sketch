@@ -96,7 +96,7 @@ header {
 }
 
 .grid-element {
-  border: 1px solid rgb(0, 255, 26);
+  user-select: none;
 }
 
 /* styling input type color */
