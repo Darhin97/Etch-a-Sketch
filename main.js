@@ -22,7 +22,6 @@ let buttonsEl = document.querySelectorAll(".btn");
 
 colorEl.addEventListener("input", function (e) {
   setColor(e.target.value);
-  console.log(e.target.value);
 });
 
 sliderEl.addEventListener("input", function (e) {
@@ -32,7 +31,7 @@ sliderEl.addEventListener("input", function (e) {
   reloadGrid();
 });
 
-clearModeEl.addEventListener("click", clear);
+clearModeEl.addEventListener("click", reloadGrid);
 
 for (let btn of buttonsEl) {
   btn.addEventListener("click", function () {
@@ -122,5 +121,10 @@ function erased(e) {
 
 function clear() {
   gridsEl.innerHTML = "";
-  sliderSizeEl.textContent = "Select Grid Size";
+  createGrid(currentSize);
 }
+
+window.onload = function () {
+  createGrid(DEFAULT_SIZE);
+  colorEl.value = "#000000";
+};
