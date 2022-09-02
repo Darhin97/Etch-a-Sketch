@@ -28,6 +28,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+header {
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 2rem 0;
+  color: #0b565f;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 4rem;
+  gap: 3rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .btn {
   width: 10rem;
   padding: 0.45rem;
@@ -42,41 +66,22 @@ body {
   color: #000;
 }
 
+.active {
+  background-color: hsla(200, 45%, 55%, 0.4);
+  color: #fff;
+}
+
 .active:hover {
   transform: scale(1.03);
   background-color: hsla(200, 45%, 55%, 0.4);
   color: #fff;
 }
 
-header {
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-.container {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-  margin-inline: auto;
-  gap: 3rem;
-}
-
-.controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.active {
-  background-color: hsla(200, 45%, 55%, 0.4);
-  color: #fff;
-}
 .grids {
   width: 500px;
   height: 500px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  display: grid;
 }
 
 @media (max-width: 60em) {
@@ -84,7 +89,82 @@ header {
     width: 400px;
     height: 400px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    background-color: #fefefe;
 
     /* background-color: black; */
+  }
+}
+
+.grid-element {
+  border: 1px solid rgb(0, 255, 26);
+}
+
+/* styling input type color */
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+/* range slider */
+.slider {
+  border: 1.9px solid #3498db;
+  border-radius: 10px;
+  width: 180px;
+  height: 12px;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.slider::-moz-range-progress {
+  height: 12px;
+  border-radius: 10px;
+  background: #3498db;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background: red;
+  border-radius: 50%;
+}
+
+/* slider chrome */
+@supports (-webkit-appearance: none) {
+  .slider {
+    border-radius: 10px;
+    width: 180px;
+    height: 10px;
+  }
+  .slider::-webkit-slider-runnable-track {
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background: #3498db;
+    transition: all ease-in 10s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-top: -5px; /*set the margin in chrome*/
+    cursor: pointer;
+    background: red;
+    border-radius: 50%;
   }
 }
